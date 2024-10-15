@@ -8,6 +8,6 @@ cp "/etc/letsencrypt/live/mail.domainmu.com/chain.pem" "/etc/letsencrypt/live/ma
 cat /tmp/ISRG-X1.pem >> "/etc/letsencrypt/live/mail.domainmu.com/chainZimbra.pem"
 chown zimbra:zimbra /etc/letsencrypt -R
 cd /tmp
-su zimbra -c '/opt/zimbra/bin/zmcertmgr deploycrt comm "/etc/letsencrypt/live/mail.pt-sog.com/cert.pem" "/etc/letsencrypt/live/mail.pt-sog.com/chainZimbra.pem"'
+su zimbra -c '/opt/zimbra/bin/zmcertmgr deploycrt comm "/etc/letsencrypt/live/mail.domainmu.com/cert.pem" "/etc/letsencrypt/live/mail.domainmu.com/chainZimbra.pem"'
 rm -f "/etc/letsencrypt/live/mail.domainmu.com/chainZimbra.pem"
 su zimbra -c 'zmcontrol restart'
